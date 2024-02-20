@@ -21,3 +21,27 @@ export async function deleteSnippet(id: number) {
 
   redirect('/');
 }
+
+export async function createSnippet(
+  formState: { message: string },
+  formData: FormData
+) {
+  // Check the user's inputs and make sure they're valid
+  return {
+    message: 'Title must be longer'
+  };
+
+  // const title = formData.get('title') as string;
+  // const code = formData.get('code') as string;
+
+  // // Create a new record in the database
+  // const snippet = await db.snippet.create({
+  //   data: {
+  //     title,
+  //     code
+  //   }
+  // });
+
+  // // Redirect the user back to the root route
+  // redirect('/');
+}
